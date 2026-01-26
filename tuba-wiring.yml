@@ -1,0 +1,127 @@
+connectors:
+  J1 mainboard:
+    type: JST-XH
+    subtype: male
+    pinlabels: [Vcc, IN1_P, IN2_P, IN1_RP, IN2_RP, IN3_RP, IN4_RP, SWITCH_2, ENDSTOP_AFT, GND]
+  
+  Battery:
+    type: XT60
+    subtype: male
+    pinlabels: [Vcc,SWITCH_2, GND]
+  
+  Aft Endstop:
+    type: terminals
+    pinlabels: [ENDSTOP_AFT, GND]
+
+  VMA409 H-Bridge:
+    type: header
+    pinlabels: [5V,GND,EN_B,IN4_RP,IN3_RP,IN2_RP,IN1_RP,EN_A]
+
+  VMA409 MotorA:
+    type: terminals
+    pinlabels: [PITCH_1, PITCH_2]
+    
+  VMA409 MotorB:
+    type: terminals
+    pinlabels: [ROLL_1, ROLL_2]
+
+  Pitch Motor:
+    type: terminals
+    pinlabels: [PITCH_1, PITCH_2]
+    
+  Roll Motor:
+    type: terminals
+    pinlabels: [ROLL_1, ROLL_2]
+    
+  Pump Motor:
+    type: terminals
+    pinlabels: [PUMP_1, PUMP_2]
+    
+  ZK-BM1 MotorA:
+    type: terminals
+    pinlabels: [PUMP_1, PUMP_2]
+    
+  ZK-BM1 H-Bridge:
+    type: header
+    pinlabels: [IN1_P,IN2_P,NC,NC,GND]
+    
+  J3 mainboard:
+    type: JST-XH
+    pinlabels: [ENDSTOP_FOR,NC,GND]
+    
+  Forward Endstop:
+    type: terminals
+    pinlabels: [ENDSTOP_FOR, GND]
+
+cables:
+  Ribbon Cable:
+    gauge: 0.25 mm2
+    length: 0.3
+    colors: [BK,RD,WH,YE,OG,GN,BU,BN,GY,VT]
+    wirecount: 10
+    shield: false
+  
+  Jumper:
+    colors: [RD,RD]
+    wirecount: 2
+    
+  Pitch:
+    colors: [BK,RD]
+    wirecount: 2
+
+
+  Roll:
+    colors: [BK,RD]
+    wirecount: 2
+
+  Pump:
+    colors: [BK,RD]
+    wirecount: 2
+    
+  Endstop:
+    colors: [BK,RD]
+    wirecount: 2
+    
+connections:
+  -
+    - J1 mainboard: [1,8,10]
+    - Ribbon Cable: [1,8,10]
+    - Battery: [1,2,3]
+    
+  -
+    - J1 mainboard: [9,10]
+    - Ribbon Cable: [9,10]
+    - Aft Endstop: [1,2]
+    
+  -
+    - J1 mainboard: [4,5,6,7,10]
+    - Ribbon Cable: [4,5,6,7,10]
+    - VMA409 H-Bridge: [7,6,5,4,2]
+  -
+    - J1 mainboard: [2,3,10]
+    - Ribbon Cable: [2,3,10]
+    - ZK-BM1 H-Bridge: [1,2,5]    
+  -
+    - VMA409 H-Bridge: [1,1]
+    - Jumper: [1,2]
+    - VMA409 H-Bridge: [3,8]
+    
+  -
+    - VMA409 MotorA: [1,2]
+    - Pitch: [1,2]
+    - Pitch Motor: [1,2]
+    
+  -
+    - VMA409 MotorB: [1,2]
+    - Roll: [1,2]
+    - Roll Motor: [1,2]
+    
+  -
+    - ZK-BM1 MotorA: [1,2]
+    - Pump: [1,2]
+    - Pump Motor: [1,2]
+    
+  -
+    - J3 mainboard: [1,3]
+    - Endstop: [1,2]
+    - Forward Endstop: [1,2]

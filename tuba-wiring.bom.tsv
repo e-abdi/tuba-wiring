@@ -1,0 +1,9 @@
+Id	Description	Qty	Unit	Designators
+1	Cable, 10 x 0.25 mm²	0.3	m	Ribbon Cable
+2	Cable, 2 wires	0	m	Endstop, Jumper, Pitch, Pump, Roll
+3	Connector, JST-XH, 3 pins	1		J3 mainboard
+4	Connector, JST-XH, male, 10 pins	1		J1 mainboard
+5	Connector, XT60, male, 3 pins	1		Battery
+6	Connector, header, 5 pins	1		ZK-BM1 H-Bridge
+7	Connector, header, 8 pins	1		VMA409 H-Bridge
+8	Connector, terminals, 2 pins	8		Aft Endstop, Forward Endstop, Pitch Motor, Pump Motor, Roll Motor, VMA409 MotorA, VMA409 MotorB, ZK-BM1 MotorA

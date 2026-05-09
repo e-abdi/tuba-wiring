@@ -53,7 +53,33 @@ connectors:
     type: terminals
     pinlabels: [ENDSTOP_FOR, GND]
 
+  MCBH-8F:
+    type: Bulkhead
+    pinlabels: [GND,NC,SWITCH_1,SWITCH_2,NC,NC,RX,TX]
+
+  MCDC-8M:
+    type: Dummy
+    pinlabels: [NC,NC,SWITCH_1,SWITCH_2,NC,NC,NC,NC]
+
+  
+  MCBH mainboard:
+    type: JST-XH
+    pinlabels: [VCC,SWITCH_1,SWITCH_2,NC,NC,RX,TX,GND]
+
 cables:
+
+  Shorting plug:
+    colors: [BK]
+    wirecount: 1
+
+  bulkhead cable:
+    gauge: 0.25 mm2
+    length: 0.1
+    colors: [BK,WH,RD,GN,OG,BU,WHBK,RDBK]
+    wirecount: 8
+    shield: false
+
+
   Ribbon Cable:
     gauge: 0.25 mm2
     length: 0.3
@@ -125,3 +151,15 @@ connections:
     - J3 mainboard: [1,3]
     - Endstop: [1,2]
     - Forward Endstop: [1,2]
+
+  -
+    - MCDC-8M: [3]
+    - Shorting plug: [1]
+    - MCDC-8M: [4]
+
+  -
+    - MCBH-8F: [1,3,4,7,8]
+    - bulkhead cable: [1,3,4,7,8]
+    - MCBH mainboard: [8,2,3,6,7]
+
+

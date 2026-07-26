@@ -1,14 +1,13 @@
 Id	Description	Qty	Unit	Designators
-1	Cable, 1 wires	0	m	Shorting plug
+1	Cable, 1 wires	0	m	Shorting plug, Switch Feed
 2	Cable, 10 x 0.25 mm²	0.3	m	Ribbon Cable
-3	Cable, 2 wires	0	m	Endstop, Jumper, Pitch, Pump, Roll
+3	Cable, 2 wires	0	m	Battery Cable, Endstop Aft, Endstop For, Pitch, Pump, Roll
 4	Cable, 8 x 0.25 mm²	0.1	m	bulkhead cable
 5	Connector, Bulkhead, 8 pins	1		MCBH-8F
 6	Connector, Dummy, 8 pins	1		MCDC-8M
-7	Connector, JST-XH, 3 pins	1		J3 mainboard
-8	Connector, JST-XH, 8 pins	1		MCBH mainboard
-9	Connector, JST-XH, male, 10 pins	1		J1 mainboard
-10	Connector, XT60, male, 3 pins	1		Battery
-11	Connector, header, 5 pins	1		ZK-BM1 H-Bridge
-12	Connector, header, 8 pins	1		VMA409 H-Bridge
-13	Connector, terminals, 2 pins	8		Aft Endstop, Forward Endstop, Pitch Motor, Pump Motor, Roll Motor, VMA409 MotorA, VMA409 MotorB, ZK-BM1 MotorA
+7	Connector, JST-XH, 2 pins	2		J2 tailboard, J3 tailboard
+8	Connector, JST-XH, 3 pins	1		J3 mainboard
+9	Connector, JST-XH, 8 pins	1		MCBH mainboard
+10	Connector, JST-XH, male, 10 pins	2		J1 mainboard, J1 tailboard
+11	Connector, XT60, male, 3 pins	1		Battery
+12	Connector, terminals, 2 pins	9		Aft Endstop, Forward Endstop, J4 tailboard, Pitch Motor, Pump Motor, Roll Motor, VMA409 MotorA, VMA409 MotorB, ZK-BM1 MotorA
